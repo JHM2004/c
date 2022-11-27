@@ -1,0 +1,25 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int Pow(int n, int k)
+{
+	if (k == 0)
+	{
+		return 1;
+	}
+	if (k > 0)
+	{
+		return n * Pow(n , k-1);
+	}
+}
+
+int main()
+{
+	int n = 0;
+	int k = 0;
+	printf("请输入n和k:>");
+	scanf("%d %d", &n,&k);
+	int z=Pow(n, k);
+	printf("%d\n", z);
+	return 0;
+}
